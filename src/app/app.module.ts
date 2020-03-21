@@ -11,13 +11,17 @@ import { HomeComponent } from './home/home.component';
 import {LoginComponent} from "../login/login.component";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {LoginModule} from "../login/login.module";
+import {ClientViewModule} from "./client-view/client-view.module";
+import { ClientViewComponent } from './client-view/client-view.component';
+
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent},
   { path: 'login', component: LoginComponent},
   { path: 'seller/:id', component: SellerViewComponent },
+  { path: 'client/:id', component: ClientViewComponent},
   { path: '',
-    redirectTo: '/home',
+  redirectTo: '/home',
     pathMatch: 'full'
   },
   //{ path: '**', component: PageNotFoundComponent }
@@ -26,7 +30,7 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,6 +38,7 @@ const appRoutes: Routes = [
     SellerViewModule,
     LoginModule,
     BrowserAnimationsModule,
+    ClientViewModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: false } // <-- debugging purposes only
