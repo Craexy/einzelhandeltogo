@@ -9,12 +9,14 @@ import {SellerViewModule} from "../seller-view/seller-view.module";
 import {SellerViewComponent} from "../seller-view/seller-view/seller-view.component";
 import { HomeComponent } from './home/home.component';
 import { ClientViewComponent } from './client-view/client-view.component';
+import { GridListComponent } from './grid-list/grid-list.component';
 
 const appRoutes: Routes = [
   { path: 'seller/:id', component: SellerViewComponent },
   { path: 'home', component: HomeComponent},
+  { path: 'client/:id', component: ClientViewComponent},
   { path: '',
-    redirectTo: '/home',
+  redirectTo: '/home',
     pathMatch: 'full'
   },
   //{ path: '**', component: PageNotFoundComponent }
@@ -24,7 +26,9 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     HomeComponent,
-    ClientViewComponent
+    SellerViewComponent,
+    ClientViewComponent,
+    GridListComponent
   ],
   imports: [
     BrowserModule,
