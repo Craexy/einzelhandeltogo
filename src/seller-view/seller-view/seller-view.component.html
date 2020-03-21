@@ -1,3 +1,40 @@
 <h1>Seller View</h1>
 <h1>Tante Emma Laden</h1>
 
+<!-- Editable table -->
+      <div id="table" class="table-editable">
+        <span class="table-add float-right mb-3 mr-2">
+          <a class="text-success" (click)="add()">
+            <mdb-icon fas icon="plus" size="2x"></mdb-icon>
+          </a>
+        </span>
+        <table class="table table-bordered table-responsive-md table-striped text-center">
+          <tr>
+            <th class="text-center">Produkt</th>
+            <th class="text-center">Beschreibung</th>
+            <th class="text-center">Preis (in €)</th>
+          </tr>
+          <tr *ngFor="let product of productList; let id = index">
+            <td>
+              <span (keyup)="changeValue(id, 'name', $event)" (blur)="updateList(id, 'name', $event)" contenteditable="true">{{product.name}}</span>
+            </td>
+            <td>
+              <span contenteditable="true" (keyup)="changeValue(id, 'description', $event)" (blur)="updateList(id, 'description', $event)">{{product.description}}</span>
+            </td>
+            <td>
+              <span contenteditable="true" (keyup)="changeValue(id, 'price', $event)" (blur)="updateList(id, 'price', $event)">{{product.price}}</span>
+            </td>
+            <td>
+              <span class="table-remove">
+                <button type="button" mdbBtn color="danger" rounded="true" size="sm" class="my-0" (click)="remove(id)">Remove</button>
+              </span>
+            </td>
+            <td>
+              <span class="table-add">
+                <button type="button" mdbBtn color="danger" rounded="true" size="sm" class="my-0" (click)="add()">Add</button>
+              </span>
+            </td>
+          </tr>
+        </table>
+      </div>
+  <!-- Editable table -->
