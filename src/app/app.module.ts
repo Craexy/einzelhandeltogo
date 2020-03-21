@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -12,7 +13,8 @@ import {SellerViewModule} from "../seller-view/seller-view.module";
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SellerViewModule
+    SellerViewModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
