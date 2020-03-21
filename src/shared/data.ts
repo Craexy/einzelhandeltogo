@@ -12,7 +12,7 @@ export interface Gps {
 
 export interface Buyer {
   id: number;
-  user: integer;
+  user: number;
   phonenumber: string;
   adress: string;
   postalAdress: string;
