@@ -8,8 +8,9 @@ import { AppComponent } from './app.component';
 import {SellerViewModule} from "../seller-view/seller-view.module";
 import {SellerViewComponent} from "../seller-view/seller-view/seller-view.component";
 import { HomeComponent } from './home/home.component';
+import {ClientViewModule} from "./client-view/client-view.module";
 import { ClientViewComponent } from './client-view/client-view.component';
-import { GridListComponent } from './grid-list/grid-list.component';
+
 
 const appRoutes: Routes = [
   { path: 'seller/:id', component: SellerViewComponent },
@@ -26,15 +27,13 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     HomeComponent,
-    SellerViewComponent,
-    ClientViewComponent,
-    GridListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     SellerViewModule,
     BrowserAnimationsModule,
+    ClientViewModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
