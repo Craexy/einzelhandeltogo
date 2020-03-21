@@ -4,7 +4,6 @@ import { ClientViewComponent } from './client-view.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 
 
-
 @NgModule({
   declarations: [ClientViewComponent],
   exports: [
