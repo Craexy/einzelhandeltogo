@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import {SellerViewModule} from "../seller-view/seller-view.module";
 import {SellerViewComponent} from "../seller-view/seller-view/seller-view.component";
 import { HomeComponent } from './home/home.component';
+import { ClientViewComponent } from './client-view/client-view.component';
 
 const appRoutes: Routes = [
   { path: 'seller/:id', component: SellerViewComponent },
@@ -22,7 +23,8 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    ClientViewComponent
   ],
   imports: [
     BrowserModule,
