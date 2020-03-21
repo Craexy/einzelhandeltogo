@@ -8,10 +8,14 @@ import { AppComponent } from './app.component';
 import {SellerViewModule} from "../seller-view/seller-view.module";
 import {SellerViewComponent} from "../seller-view/seller-view/seller-view.component";
 import { HomeComponent } from './home/home.component';
+import {LoginComponent} from "../login/login.component";
+import {MatToolbarModule} from "@angular/material/toolbar";
+import {LoginModule} from "../login/login.module";
 
 const appRoutes: Routes = [
-  { path: 'seller/:id', component: SellerViewComponent },
   { path: 'home', component: HomeComponent},
+  { path: 'login', component: LoginComponent},
+  { path: 'seller/:id', component: SellerViewComponent },
   { path: '',
     redirectTo: '/home',
     pathMatch: 'full'
@@ -28,11 +32,13 @@ const appRoutes: Routes = [
     BrowserModule,
     AppRoutingModule,
     SellerViewModule,
+    LoginModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(
       appRoutes,
-      { enableTracing: true } // <-- debugging purposes only
-    )
+      { enableTracing: false } // <-- debugging purposes only
+    ),
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
