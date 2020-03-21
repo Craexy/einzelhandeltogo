@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-seller-view',
   templateUrl: './seller-view.component.html',
@@ -8,6 +9,9 @@ import { Component, OnInit } from '@angular/core';
 export class SellerViewComponent implements OnInit {
 
   constructor() { }
+
+  isSeller=true;
+
 
   ngOnInit() {
   }
