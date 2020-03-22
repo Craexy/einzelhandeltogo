@@ -14,18 +14,18 @@ body{
 mat-card{
   width: 60%;
 }
-table {
-    border-collapse: collapse;
-  }
 
-  table, th, td {
-    border: 1px solid black;
-  }
+  
+tr:nth-child(even) {background-color: #f2f2f2;}
 
-  td {
-    text-align: center;
-  }
+td {
+  text-align: center;
+}
 
-  td:hover {
-    background-color: #A0B1C6;
-  }
+td:hover {
+  background-color: #A0B1C6;
+}
+
+td:focus {
+  background-color: rgb(213, 216, 8);
+}

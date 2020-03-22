@@ -1,9 +1,10 @@
-<h1>Client View</h1>
+<br>
+
+<button (click)="sidenav.toggle()" id="myBtn" title="Go to top">Filter</button>
+
 <mat-sidenav-container class="example-container">
   <mat-sidenav #sidenav mode="over" fixedInViewport="true">
     <br>
-    <a class="button fancy-button" (click)="sidenav.toggle()"><i class="material-icons">filter_list</i></a>
-    <p><button mat-button (click)="sidenav.toggle()">Toggle</button></p>
     <div *ngFor="let kategorie of kategorien" >
       <mat-checkbox labelPosition="before">{{kategorie.name}}</mat-checkbox>
       <br>
@@ -12,7 +13,6 @@
 
 
 <mat-sidenav-content>
-  <a class="button fancy-button"><i class="material-icons">filter_list</i></a>
 </mat-sidenav-content>
 </mat-sidenav-container>
 
