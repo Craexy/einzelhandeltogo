@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DataService } from 'src/data.service';
 
 @Component({
   selector: 'app-seller-view',
@@ -6,6 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./seller-view.component.scss']
 })
 export class SellerViewComponent {
+
+  constructor(
+    private cartService: DataService
+  ) { }
+
     editField: string;
     productList: Array<any> = [
       { id: 0, name: 'Dummyprodukt', description: "Dummyeigenschaften", price: 50 },
