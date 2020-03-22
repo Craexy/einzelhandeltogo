@@ -4,7 +4,9 @@
 <mat-sidenav-container class="example-container">
   <mat-sidenav #sidenav mode="side" fixedInViewport="true">
     <br>
-    <div *ngFor="let kategorie of kategorien" >
+    <br>
+    <br>
+    <div *ngFor="let kategorie of kategorien">
       <mat-checkbox labelPosition="after">{{kategorie.name}}</mat-checkbox>
       <br>
     </div>
@@ -12,21 +14,21 @@
 </mat-sidenav-container>
 
 
-<mat-grid-list cols="2" rowHeight="100px" gutterSize="1.5px">
+<mat-grid-list cols="2" rowHeight="150px" gutterSize="1.5px">
   <mat-grid-tile
       *ngFor="let tile of tiles; index as id" (click)="open($event, id)"
       [colspan]="tile.cols"
       [rowspan]="tile.rows"
       [style.background]="tile.color">
-      <mat-grid-tile-header [style.background]="'#045673'">{{tile.text}}</mat-grid-tile-header>
+      <mat-grid-tile-header [style.background]="'#grey'">{{tile.text}}</mat-grid-tile-header>
       <mat-grid-tile-footer [style.background]="'#grey'">
-        <span>
+        <span id="extLink">
           Mustersraße 32
-        <br> 01066 Dresden
+        01066 Dresden
         </span>
         <span class="stretcher"></span>
         <span>
-          <a mat-raised-button color="accent" >Jetzt einkaufen</a>
+          <a mat-raised-button color="accent"> Jetzt einkaufen</a>
         </span>
       </mat-grid-tile-footer>
       <img src="{{images[id].url}}" width="60%">
