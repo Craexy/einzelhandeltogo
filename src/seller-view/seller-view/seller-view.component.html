@@ -1,8 +1,7 @@
 <body>
 <h1>Muster-Laden</h1>
-<h1>Produktliste</h1>
+<h2>Produktliste</h2>
 
-<!-- app.component.html -->
 <div class="container text-center">
 
   <table mat-table [dataSource]="dataSource" #mytable class="my-table mat-elevation-z8">
@@ -41,7 +40,7 @@
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
 
-  <button mat-button (click)="openDialog('Add',{})" mat-flat-button color="primary">Add Row</button>
+  <button mat-button (click)="openDialog('Add',{})" id="addButton" mat-flat-button color="primary">Add Row</button>
 </div>
 
 <br>

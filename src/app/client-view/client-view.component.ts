@@ -37,16 +37,16 @@ export class ClientViewComponent implements OnInit {
 
   tiles: Tile[] = [
     {text: 'Shop 1', cols: 1, rows: 2, color: '#3F51B5'},
-    {text: 'Shop 2', cols: 1, rows: 2, color: '#'},
-    {text: 'Shop 3', cols: 1, rows: 2, color: '#A0B1C6'},
-    {text: 'Shop 4', cols: 1, rows: 2, color: '#A0B1C6'},
-    {text: 'Shop 5', cols: 1, rows: 2, color: '#A0B1C6'},
-    {text: 'Shop 6', cols: 1, rows: 2, color: '#A0B1C6'},
-    {text: 'Shop 7', cols: 1, rows: 2, color: '#A0B1C6'},
+    {text: 'Shop 2', cols: 1, rows: 2, color: '#3F51B5'},
+    {text: 'Shop 3', cols: 1, rows: 2, color: '#3F51B5'},
+    {text: 'Shop 4', cols: 1, rows: 2, color: '#3F51B5'},
+    {text: 'Shop 5', cols: 1, rows: 2, color: '#3F51B5'},
+    {text: 'Shop 6', cols: 1, rows: 2, color: '#3F51B5'},
+    {text: 'Shop 7', cols: 1, rows: 2, color: '#3F51B5'},
   ];
 
-  public open(event, text) {
-    alert('Open details page of ' + text);
+  public open(event, id) {
+    window.location.href='/shop/id';
   }
 
   constructor() { }

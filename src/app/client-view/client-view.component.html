@@ -1,8 +1,6 @@
 <body>
 
-<!--<button (click)="sidenav.toggle()" id="myBtn" title="Go to top">Filter</button>-->
-<button (click)="sidenav.toggle()" id="myBtn" mat-raised-button color="accent">Filter</button>
-
+<a class="button fancy-button" (click)="sidenav.toggle()" id="myBtn" mat-raised-button color="accent"><i class="material-icons">filter_list</i></a> 
 <mat-sidenav-container class="example-container">
   <mat-sidenav #sidenav mode="side" fixedInViewport="true">
     <br>
@@ -16,7 +14,7 @@
 
 <mat-grid-list cols="2" rowHeight="100px" gutterSize="1.5px">
   <mat-grid-tile
-      *ngFor="let tile of tiles" (click)="open($event, tile.text)"
+      *ngFor="let tile of tiles; index as id" (click)="open($event, id)"
       [colspan]="tile.cols"
       [rowspan]="tile.rows"
       [style.background]="tile.color">

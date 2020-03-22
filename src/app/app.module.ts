@@ -21,6 +21,7 @@ import {MatIconModule} from "@angular/material/icon";
 import { DialogBoxComponent } from './dialog-box/dialog-box.component';
 import { FormsModule } from '@angular/forms';
 import {DriverComponent} from "../driver/driver.component";
+import { DetailsViewComponent } from './details-view/details-view.component';
 import {DriverModule} from "../driver/driver.module";
 import {ProfileComponent} from "../profile/profile.component";
 import {ProfileModule} from "../profile/profile.module";
@@ -32,6 +33,7 @@ const appRoutes: Routes = [
   { path: 'seller/:id', component: SellerViewComponent },
   { path: 'client/:id', component: ClientViewComponent},
   { path: 'driver/:id', component: DriverComponent},
+  { path: 'shop/:id', component: DetailsViewComponent },
   { path: 'profile', component: ProfileComponent},
   { path: '',
   redirectTo: '/home',

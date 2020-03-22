@@ -1,4 +1,3 @@
-//app.component.ts
 import { Component, ViewChild } from '@angular/core';
 
 import { MatDialog } from '@angular/material/dialog';
@@ -7,17 +6,17 @@ import {MatTable} from "@angular/material/table"
 import { DataService } from 'src/data.service';
 import { DialogBoxComponent } from 'src/app/dialog-box/dialog-box.component';
 
-export interface UsersData {
+export interface ProductsData {
   id: number;
   product: string;
   price: number;
 }
 
-const ELEMENT_DATA: UsersData[] = [
-  {id: 1, product: 'Steckdosenleiste', price: 60},
-  {id: 2, product: 'Tabak', price: 60},
-  {id: 3, product: 'Gesellschaftsspiele', price: 60},
-  {id: 4, product: 'Dosenravioli', price: 60}
+const ELEMENT_DATA: ProductsData[] = [
+  {id: new Date().getTime(), product: 'Steckdosenleiste', price: 60},
+  {id: new Date().getTime(), product: 'Coronaimpfstoff', price: 60},
+  {id: new Date().getTime(), product: 'Gesellschaftsspiele', price: 60},
+  {id: new Date().getTime(), product: 'Dosenravioli', price: 60}
 ];
 @Component({
   selector: 'app-seller-view',
