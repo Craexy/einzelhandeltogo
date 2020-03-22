@@ -45,3 +45,7 @@ export interface adress {
   province: string;
   code: string;
 }
+
+export interface Token{
+  token: string;
+}

@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import {TestData} from "./login/login.component";
 import {Observable, of} from "rxjs";
 import {Buyer, Driver} from "./shared/data";
+import {Token} from "./shared/data";
 
 @Injectable({
   providedIn: 'root'
@@ -31,8 +32,8 @@ export class DataService {
     return of(this.TEST);
   }
 
-  login(username: string, password: string): Observable<string>{
-    return this.http.post<string>('api-token-auth', {username: 'christopherutsch', password: 'etg-wirvsvirus'});
+  login(username: string, password: string): Observable<Token>{
+    return this.http.post<Token>('api-token-auth/', {username: username, password: password});
   }
 
   getBuyer(id: number): Observable<Buyer>{

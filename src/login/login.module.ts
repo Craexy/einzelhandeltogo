@@ -7,6 +7,7 @@ import {MatButtonModule} from "@angular/material/button";
 import {HTTP_INTERCEPTORS} from "@angular/common/http";
 import {APIInterceptor} from "../shared/HttpInterceptor";
 import {FormsModule} from "@angular/forms";
+import {CookieService} from "ngx-cookie-service";
 
 
 @NgModule({
@@ -23,7 +24,9 @@ import {FormsModule} from "@angular/forms";
     provide: HTTP_INTERCEPTORS,
     useClass: APIInterceptor,
     multi: true,
-  }]
+  },
+  CookieService],
+
 })
 
 export class LoginModule {
