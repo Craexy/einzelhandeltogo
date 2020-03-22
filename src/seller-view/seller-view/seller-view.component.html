@@ -1,69 +1,68 @@
 <h1>Seller View</h1>
 <h1>Tante Emma Laden</h1>
-
-<!-- Editable table -->
-      <div id="table" class="table-editable">
+<!--
+&lt;!&ndash; Editable table &ndash;&gt;
+<div id="table" class="table-editable">
         <span class="table-add float-right mb-3 mr-2">
           <a class="text-success" (click)="add()">
             <mdb-icon fas icon="plus" size="2x"></mdb-icon>
           </a>
         </span>
-        <table class="table table-bordered table-responsive-md table-striped text-center">
-          <tr>
-            <th class="text-center">Produkt</th>
-            <th class="text-center">Beschreibung</th>
-            <th class="text-center">Preis (in €)</th>
-          </tr>
-          <tr *ngFor="let product of productList; let id = index">
-            <td>
-              <span (keyup)="changeValue(id, 'name', $event)" (blur)="updateList(id, 'name', $event)" contenteditable="true">{{product.name}}</span>
-            </td>
-            <td>
-              <span contenteditable="true" (keyup)="changeValue(id, 'description', $event)" (blur)="updateList(id, 'description', $event)">{{product.description}}</span>
-            </td>
-            <td>
-              <span contenteditable="true" (keyup)="changeValue(id, 'price', $event)" (blur)="updateList(id, 'price', $event)">{{product.price}}</span>
-            </td>
-            <td>
+  <table class="table table-bordered table-responsive-md table-striped text-center">
+    <tr>
+      <th class="text-center">Produkt</th>
+      <th class="text-center">Beschreibung</th>
+      <th class="text-center">Preis (in €)</th>
+    </tr>
+    <tr *ngFor="let product of productList; let id = index">
+      <td>
+        <span (keyup)="changeValue(id, 'name', $event)" (blur)="updateList(id, 'name', $event)" contenteditable="true">{{product.name}}</span>
+      </td>
+      <td>
+        <span contenteditable="true" (keyup)="changeValue(id, 'description', $event)" (blur)="updateList(id, 'description', $event)">{{product.description}}</span>
+      </td>
+      <td>
+        <span contenteditable="true" (keyup)="changeValue(id, 'price', $event)" (blur)="updateList(id, 'price', $event)">{{product.price}}</span>
+      </td>
+      <td>
               <span class="table-remove">
                 <button type="button" mdbBtn color="danger" rounded="true" size="sm" class="my-0" (click)="remove(id)">Remove</button>
               </span>
-            </td>
-            <td>
+      </td>
+      <td>
               <span class="table-add">
                 <button type="button" mdbBtn color="danger" rounded="true" size="sm" class="my-0" (click)="add()">Add</button>
               </span>
-            </td>
-          </tr>
-        </table>
-      </div>
-  <!-- Editable table -->
+      </td>
+    </tr>
+  </table>
+</div>
+&lt;!&ndash; Editable table &ndash;&gt;-->
 <h1>Verkäuferprofil</h1>
 <body>
 <span class="stretcher"></span>
 <mat-card>
   <mat-card-header></mat-card-header>
   <mat-card-content>
-<form class="example-form">
-  <mat-form-field class="example-full-width">
-    <mat-label>Firmenname</mat-label>
-    <input matInput placeholder="Musterunternehmen" value="Musterunternehmen">
-  </mat-form-field>
-  <mat-form-field class="example-full-width">
-    <mat-label>Telefon</mat-label>
-    <input matInput placeholder="Telefon" value="Telefon">
-  </mat-form-field>
-  <mat-form-field class="example-full-width">
-    <mat-label>Kategorie</mat-label>
-    <input matInput placeholder="Kategorie" value="Kategorie">
-  </mat-form-field>
-  <mat-form-field class="example-full-width">
-    <mat-label>Adresse</mat-label>
-    <input matInput placeholder="" value="Adresse">
-  </mat-form-field>
-</form>
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <mat-label>Firmenname</mat-label>
+        <input matInput placeholder="Musterunternehmen" value="Musterunternehmen">
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Telefon</mat-label>
+        <input matInput placeholder="Telefon" value="Telefon">
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Kategorie</mat-label>
+        <input matInput placeholder="Kategorie" value="Kategorie">
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Adresse</mat-label>
+        <input matInput placeholder="" value="Adresse">
+      </mat-form-field>
+    </form>
   </mat-card-content>
 </mat-card>
 <span class="stretcher"></span>
 </body>
-

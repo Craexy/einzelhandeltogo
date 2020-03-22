@@ -36,6 +36,9 @@ const appRoutes: Routes = [
     AppComponent,
     HomeComponent,
   ],
+  exports: [
+    HomeComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
