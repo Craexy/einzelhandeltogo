@@ -9,14 +9,14 @@ import { DialogBoxComponent } from 'src/app/dialog-box/dialog-box.component';
 
 export interface UsersData {
   id: number;
-  name: string;
+  product: string;
 }
 
 const ELEMENT_DATA: UsersData[] = [
-  {id: 1, name: 'Steckdosenleiste'},
-  {id: 2, name: 'Tabak'},
-  {id: 3, name: 'Gesellschaftsspiele'},
-  {id: 4, name: 'Dosenravioli'}
+  {id: 1, product: 'Steckdosenleiste'},
+  {id: 2, product: 'Tabak'},
+  {id: 3, product: 'Gesellschaftsspiele'},
+  {id: 4, product: 'Dosenravioli'}
 ];
 @Component({
   selector: 'app-seller-view',
@@ -24,7 +24,7 @@ const ELEMENT_DATA: UsersData[] = [
   styleUrls: ['./seller-view.component.scss']
 })
 export class SellerViewComponent {
-  displayedColumns: string[] = ['id', 'name', 'action'];
+  displayedColumns: string[] = ['id', 'product', 'action'];
   dataSource = ELEMENT_DATA;
 
   @ViewChild(MatTable,{static:true}) table: MatTable<any>;
@@ -53,7 +53,7 @@ export class SellerViewComponent {
     var d = new Date();
     this.dataSource.push({
       id:d.getTime(),
-      name:row_obj.name
+      product:row_obj.product
     });
     this.table.renderRows();
     
@@ -61,7 +61,7 @@ export class SellerViewComponent {
   updateRowData(row_obj){
     this.dataSource = this.dataSource.filter((value,key)=>{
       if(value.id == row_obj.id){
-        value.name = row_obj.name;
+        value.product = row_obj.product;
       }
       return true;
     });
