@@ -1,7 +1,23 @@
+form{
+  display: flex;
+  flex-direction: column;
+}
+
+.stretcher{
+  width: 20%;
+}
+
+body{
+  display: flex;
+}
+
+mat-card{
+  width: 60%;
+}
 table {
     border-collapse: collapse;
   }
-  
+
   table, th, td {
     border: 1px solid black;
   }

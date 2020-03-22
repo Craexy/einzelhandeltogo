@@ -1,6 +1,6 @@
 
-
-
+<body>
+<span class="stretcher"></span>
 <mat-card class="example-card">
   <mat-card-header>
     <mat-card-title>Login</mat-card-title>
@@ -9,12 +9,12 @@
     <form class="example-form">
       <mat-form-field class="example-full-width">
         <mat-label>E-Mail-Adresse</mat-label>
-        <input matInput >
+        <input matInput [(ngModel)]='mail' name="mail">
       </mat-form-field>
       <br>
       <mat-form-field>
         <mat-label>Passwort</mat-label>
-        <input matInput [type]="'password'">
+        <input [(ngModel)]='pass' matInput [type]="'password'"  name="pass">
       </mat-form-field>
     </form>
 
@@ -24,7 +24,7 @@
     <button mat-button>Abbrechen</button>
   </mat-card-actions>
 </mat-card>
-
-<br>
+<span class="stretcher"></span>
+</body>
 
 

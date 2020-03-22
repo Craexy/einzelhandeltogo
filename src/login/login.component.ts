@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {DataService} from "../data.service";
+import {Buyer} from "../shared/data";
 
 export interface TestData {
   id: number;
@@ -15,6 +16,9 @@ export interface TestData {
 export class LoginComponent implements OnInit {
 
   testData: TestData[];
+  buyers: Buyer[];
+  mail: string = "";
+  pass: string = "";
 
   constructor(private dataService:DataService) { }
 
@@ -25,7 +29,18 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-    console.log("login button clicked");
+    this.dataService.login(this.mail, this.pass)
+      .subscribe(data => console.log(data));
+
+  }
+
+  test() {
+    this.dataService.getBuyers()
+      .subscribe(data => {
+        this.buyers = data;
+        console.log(data);
+      });
+    console.log(this.buyers);
   }
 
 

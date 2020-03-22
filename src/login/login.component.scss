@@ -10,4 +10,14 @@
 mat-card{
   padding: 3em;
   margin: 3em;
+  width: 30%;
+  height: fit-content;
+}
+
+body{
+  display: flex;
+}
+
+.stretcher{
+  width: 35%;
 }
