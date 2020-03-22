@@ -14,3 +14,18 @@ body{
 mat-card{
   width: 60%;
 }
+table {
+    border-collapse: collapse;
+  }
+
+  table, th, td {
+    border: 1px solid black;
+  }
+
+  td {
+    text-align: center;
+  }
+
+  td:hover {
+    background-color: #A0B1C6;
+  }
