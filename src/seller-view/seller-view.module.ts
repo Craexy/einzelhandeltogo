@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { SellerViewComponent } from './seller-view/seller-view.component';
 import {MatInputModule} from "@angular/material/input";
 import {MatCardModule} from "@angular/material/card";
-
+import {MatTableModule} from "@angular/material/table"
 
 @NgModule({
   declarations: [SellerViewComponent],
@@ -13,7 +13,8 @@ import {MatCardModule} from "@angular/material/card";
   imports: [
     CommonModule,
     MatInputModule,
-    MatCardModule
+    MatCardModule,
+    MatTableModule
   ]
 })
 export class SellerViewModule { }
