@@ -1,4 +1,3 @@
-//app.component.ts
 import { Component, ViewChild } from '@angular/core';
 
 import { MatDialog } from '@angular/material/dialog';
