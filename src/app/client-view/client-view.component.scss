@@ -5,12 +5,16 @@
     z-index: 99; /* Make sure it does not overlap */
 }
 
-mat-sidenav {
+mat-sidenav{
     padding: 20px;
+  margin-left: 0;
   }
 
+mat-sidenav-container {
+
+}
+
 body{
-  margin: 1em;
 }
 
 mat-grid-tile{

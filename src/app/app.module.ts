@@ -22,6 +22,9 @@ import { DialogBoxComponent } from './dialog-box/dialog-box.component';
 import { FormsModule } from '@angular/forms';
 import {DriverComponent} from "../driver/driver.component";
 import { DetailsViewComponent } from './details-view/details-view.component';
+import {DriverModule} from "../driver/driver.module";
+import {ProfileComponent} from "../profile/profile.component";
+import {ProfileModule} from "../profile/profile.module";
 
 
 const appRoutes: Routes = [
@@ -31,6 +34,7 @@ const appRoutes: Routes = [
   { path: 'client/:id', component: ClientViewComponent},
   { path: 'driver/:id', component: DriverComponent},
   { path: 'shop/:id', component: DetailsViewComponent },
+  { path: 'profile', component: ProfileComponent},
   { path: '',
   redirectTo: '/home',
     pathMatch: 'full'
@@ -52,6 +56,8 @@ const appRoutes: Routes = [
     AppRoutingModule,
     SellerViewModule,
     LoginModule,
+    DriverModule,
+    ProfileModule,
     BrowserAnimationsModule,
     ClientViewModule,
     FormsModule,

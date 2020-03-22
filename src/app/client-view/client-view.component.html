@@ -2,7 +2,7 @@
 
 <a class="button fancy-button" (click)="sidenav.toggle()" id="myBtn" mat-raised-button color="accent"><i class="material-icons">filter_list</i></a> 
 <mat-sidenav-container class="example-container">
-  <mat-sidenav #sidenav mode="over" fixedInViewport="true">
+  <mat-sidenav #sidenav mode="side" fixedInViewport="true">
     <br>
     <div *ngFor="let kategorie of kategorien" >
       <mat-checkbox labelPosition="after">{{kategorie.name}}</mat-checkbox>

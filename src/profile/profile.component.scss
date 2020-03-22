@@ -1,0 +1,18 @@
+form{
+  display: flex;
+  flex-direction: column;
+}
+
+.stretcher{
+  width: 20%;
+}
+
+body{
+  display: flex;
+  margin: 2em;
+}
+
+mat-card{
+  width: 60%;
+  height: fit-content;
+}
