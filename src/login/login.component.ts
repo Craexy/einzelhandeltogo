@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {DataService} from "../data.service";
-import {Buyer} from "../shared/data";
+import {Buyer, } from "../shared/data";
+import {CookieService} from "ngx-cookie-service";
+
 
 export interface TestData {
   id: number;
@@ -19,8 +21,9 @@ export class LoginComponent implements OnInit {
   buyers: Buyer[];
   mail: string = "";
   pass: string = "";
+  token: string;
 
-  constructor(private dataService:DataService) { }
+  constructor(private dataService:DataService, private cookieService: CookieService) { }
 
   ngOnInit(): void {
     this.dataService.getTestData()
@@ -30,8 +33,21 @@ export class LoginComponent implements OnInit {
 
   login() {
     this.dataService.login(this.mail, this.pass)
-      .subscribe(data => console.log(data));
+      .subscribe(data => {
+        this.parseToken(data);
+      });
+  }
 
+  parseToken(obj)
+  {
+    for(var key in obj)
+    {
+      this.cookieService.set('token', obj[key]);
+      if(obj[key] instanceof Object)
+      {
+        this.parseToken(obj[key]);
+      }
+    }
   }
 
   test() {

@@ -15,6 +15,8 @@ import {ClientViewModule} from "./client-view/client-view.module";
 import { ClientViewComponent } from './client-view/client-view.component';
 import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {APIInterceptor} from "../shared/HttpInterceptor";
+import {MatCardModule} from "@angular/material/card";
+import {MatButtonModule} from "@angular/material/button";
 
 
 const appRoutes: Routes = [
@@ -43,10 +45,12 @@ const appRoutes: Routes = [
     ClientViewModule,
     RouterModule.forRoot(
       appRoutes,
-      { enableTracing: false } // <-- debugging purposes only
+      {enableTracing: false} // <-- debugging purposes only
     ),
     MatToolbarModule,
-    HttpClientModule
+    HttpClientModule,
+    MatCardModule,
+    MatButtonModule
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,
