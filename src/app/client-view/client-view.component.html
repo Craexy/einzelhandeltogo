@@ -6,14 +6,10 @@
   <mat-sidenav #sidenav mode="over" fixedInViewport="true">
     <br>
     <div *ngFor="let kategorie of kategorien" >
-      <mat-checkbox labelPosition="before">{{kategorie.name}}</mat-checkbox>
+      <mat-checkbox labelPosition="after">{{kategorie.name}}</mat-checkbox>
       <br>
     </div>
   </mat-sidenav>
-
-
-<mat-sidenav-content>
-</mat-sidenav-content>
 </mat-sidenav-container>
 
 

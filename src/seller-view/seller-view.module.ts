@@ -4,6 +4,12 @@ import { SellerViewComponent } from './seller-view/seller-view.component';
 import {MatInputModule} from "@angular/material/input";
 import {MatCardModule} from "@angular/material/card";
 import {MatTableModule} from "@angular/material/table"
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
+import {MatDialogModule} from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatButtonModule } from '@angular/material/button';
+
 
 @NgModule({
   declarations: [SellerViewComponent],
@@ -14,7 +20,14 @@ import {MatTableModule} from "@angular/material/table"
     CommonModule,
     MatInputModule,
     MatCardModule,
-    MatTableModule
-  ]
+    MatTableModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+
+  ],
 })
 export class SellerViewModule { }
