@@ -1,10 +1,26 @@
 body{
-  display: flex;
-  margin: 2em;
+  background-image: url("../../assets/TaxiPhoto.jpeg");
 }
 
-mat-card{
-  height: fit-content;
-  width: 20%;
-  margin: 2em;
+h1{
+
+  font-size: 60px;
+  color: white;
+  font-family: Roboto;
+  text-shadow: 0 0 5px black;
+}
+
+div{
+  position: absolute;
+  top: 20%;
+  left: 22%;
+}
+
+a{
+  margin-top: 1em;
+  font-size: 40px;
+  color: white;
+  font-family: Roboto;
+  text-shadow: 0 0 5px black;
+  left: 37%;
 }

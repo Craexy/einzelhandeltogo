@@ -8,6 +8,14 @@ a:visited{
   color: white;
 }
 
+span{
+  margin: 1em;
+}
+
 img{
   margin-top: 1em;
+}
+
+mat-toolbar{
+  z-index: 5;
 }
