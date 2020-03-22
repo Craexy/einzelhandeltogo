@@ -13,7 +13,8 @@ import {MatToolbarModule} from "@angular/material/toolbar";
 import {LoginModule} from "../login/login.module";
 import {ClientViewModule} from "./client-view/client-view.module";
 import { ClientViewComponent } from './client-view/client-view.component';
-import {HttpClientModule} from "@angular/common/http";
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
+import {APIInterceptor} from "../shared/HttpInterceptor";
 
 
 const appRoutes: Routes = [
@@ -47,7 +48,11 @@ const appRoutes: Routes = [
     MatToolbarModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: APIInterceptor,
+    multi: true,
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

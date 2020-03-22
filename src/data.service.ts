@@ -9,7 +9,7 @@ import {Buyer, Driver} from "./shared/data";
 })
 export class DataService {
 
-  baseURL: string = "";
+  baseURL: string = "/shop";
 
   TEST: TestData[] = [
     { id: 11, name: 'Dr Nice' },
@@ -26,11 +26,13 @@ export class DataService {
 
   constructor(private http: HttpClient) {}
 
-  baseUrl: string = '';
-
   getTestData(): Observable<TestData[]>{
     //return this.http.get(this.baseURL+'HelloWorold');
     return of(this.TEST);
+  }
+
+  login(username: string, password: string): Observable<string>{
+    return this.http.post<string>('api-token-auth', {username: 'christopherutsch', password: 'etg-wirvsvirus'});
   }
 
   getBuyer(id: number): Observable<Buyer>{
@@ -38,7 +40,7 @@ export class DataService {
   }
 
   getBuyers(): Observable<Buyer[]>{
-    return this.http.get<Buyer[]>(this.baseURL + '/buyer/');
+    return this.http.get<Buyer[]>('buyers/');
   }
 
   getDriver(id: number): Observable<Driver>{
