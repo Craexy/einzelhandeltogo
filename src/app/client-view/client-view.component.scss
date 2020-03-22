@@ -1,7 +1,7 @@
 #myBtn {
     position: fixed; /* Fixed/sticky position */
-    bottom: 80px; /* Place the button at the bottom of the page */
-    left: 30px; /* Place the button 30px from the right */
+    bottom: 7em; /* Place the button at the bottom of the page */
+    left: 4.5em; /* Place the button 30px from the right */
     z-index: 99; /* Make sure it does not overlap */
 }
 
@@ -28,6 +28,6 @@ mat-grid-tile-footer{
 
 mat-grid-list{
   width: 80%;
-  margin-left: 15em;
+  margin-left: 12em;
 }
 

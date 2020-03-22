@@ -6,6 +6,7 @@ table {
   width: 90%;
   table-layout: fixed;
   margin: 1em;
+  margin-left: 4em;
 }
 
 th, td {
@@ -15,3 +16,6 @@ th, td {
   white-space: nowrap;
 }
 
+#addButton {
+  margin-left: 4em;
+}

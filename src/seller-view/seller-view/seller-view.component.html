@@ -1,6 +1,6 @@
 <body>
 <h1>Muster-Laden</h1>
-<h1>Produktliste</h1>
+<h2>Produktliste</h2>
 
 <div class="container text-center">
 
@@ -40,7 +40,7 @@
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
 
-  <button mat-button (click)="openDialog('Add',{})" mat-flat-button color="primary">Add Row</button>
+  <button mat-button (click)="openDialog('Add',{})" id="addButton" mat-flat-button color="primary">Add Row</button>
 </div>
 
 <br>

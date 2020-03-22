@@ -21,6 +21,7 @@ import {MatIconModule} from "@angular/material/icon";
 import { DialogBoxComponent } from './dialog-box/dialog-box.component';
 import { FormsModule } from '@angular/forms';
 import {DriverComponent} from "../driver/driver.component";
+import { DetailsViewComponent } from './details-view/details-view.component';
 
 
 const appRoutes: Routes = [
@@ -29,6 +30,7 @@ const appRoutes: Routes = [
   { path: 'seller/:id', component: SellerViewComponent },
   { path: 'client/:id', component: ClientViewComponent},
   { path: 'driver/:id', component: DriverComponent},
+  { path: 'shop/:id', component: DetailsViewComponent },
   { path: '',
   redirectTo: '/home',
     pathMatch: 'full'
