@@ -18,7 +18,7 @@
       [colspan]="tile.cols"
       [rowspan]="tile.rows"
       [style.background]="tile.color">
-      <mat-grid-tile-header [style.background]="'#045673'">{{tile.text}}</mat-grid-tile-header>
+      <mat-grid-tile-header [style.background]="'#grey'">{{tile.text}}</mat-grid-tile-header>
       <mat-grid-tile-footer [style.background]="'#grey'">
         <span>
           Mustersraße 32
@@ -26,10 +26,10 @@
         </span>
         <span class="stretcher"></span>
         <span>
-          <a mat-raised-button color="accent" href="amazon.com">Muster-Shop 24</a>
+          <a mat-raised-button color="accent" href="amazon.com" id="extLink">Muster-Shop 24</a>
         </span>
       </mat-grid-tile-footer>
-      <img src="../../assets/SupportLocals_logo.png" width="60%">
+      <img src="../../assets/buchhandlung.jpeg" width="60%">
   </mat-grid-tile>
 </mat-grid-list>
 
