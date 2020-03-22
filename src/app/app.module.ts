@@ -17,6 +17,8 @@ import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {APIInterceptor} from "../shared/HttpInterceptor";
 import {MatCardModule} from "@angular/material/card";
 import {MatButtonModule} from "@angular/material/button";
+import { DialogBoxComponent } from './dialog-box/dialog-box.component';
+import { FormsModule } from '@angular/forms';
 
 
 const appRoutes: Routes = [
@@ -35,6 +37,7 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     HomeComponent,
+    DialogBoxComponent,
   ],
   exports: [
     HomeComponent
@@ -46,6 +49,7 @@ const appRoutes: Routes = [
     LoginModule,
     BrowserAnimationsModule,
     ClientViewModule,
+    FormsModule,
     RouterModule.forRoot(
       appRoutes,
       {enableTracing: false} // <-- debugging purposes only
@@ -54,6 +58,9 @@ const appRoutes: Routes = [
     HttpClientModule,
     MatCardModule,
     MatButtonModule
+  ],
+  entryComponents: [
+    DialogBoxComponent
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,

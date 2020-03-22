@@ -1,43 +1,45 @@
 <h1>Seller View</h1>
 <h1>Tante Emma Laden</h1>
-<!--
-&lt;!&ndash; Editable table &ndash;&gt;
-<div id="table" class="table-editable">
-        <span class="table-add float-right mb-3 mr-2">
-          <a class="text-success" (click)="add()">
-            <mdb-icon fas icon="plus" size="2x"></mdb-icon>
-          </a>
-        </span>
-  <table class="table table-bordered table-responsive-md table-striped text-center">
-    <tr>
-      <th class="text-center">Produkt</th>
-      <th class="text-center">Beschreibung</th>
-      <th class="text-center">Preis (in €)</th>
-    </tr>
-    <tr *ngFor="let product of productList; let id = index">
-      <td>
-        <span (keyup)="changeValue(id, 'name', $event)" (blur)="updateList(id, 'name', $event)" contenteditable="true">{{product.name}}</span>
+
+<!-- app.component.html -->
+<div class="container text-center">
+
+  <table mat-table [dataSource]="dataSource" #mytable class="my-table mat-elevation-z8">
+
+    <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+    <!-- Id Column -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef> ID </th>
+      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+
+    <!-- Action Column -->
+    <ng-container matColumnDef="action">
+      <th mat-header-cell *matHeaderCellDef> Action </th>
+      <td mat-cell *matCellDef="let element" class="action-link"> 
+        <a (click)="openDialog('Update',element)">Edit</a> | 
+        <a (click)="openDialog('Delete',element)">Delete</a>  
       </td>
-      <td>
-        <span contenteditable="true" (keyup)="changeValue(id, 'description', $event)" (blur)="updateList(id, 'description', $event)">{{product.description}}</span>
-      </td>
-      <td>
-        <span contenteditable="true" (keyup)="changeValue(id, 'price', $event)" (blur)="updateList(id, 'price', $event)">{{product.price}}</span>
-      </td>
-      <td>
-              <span class="table-remove">
-                <button type="button" mdbBtn color="danger" rounded="true" size="sm" class="my-0" (click)="remove(id)">Remove</button>
-              </span>
-      </td>
-      <td>
-              <span class="table-add">
-                <button type="button" mdbBtn color="danger" rounded="true" size="sm" class="my-0" (click)="add()">Add</button>
-              </span>
-      </td>
-    </tr>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
+
+  <button mat-button (click)="openDialog('Add',{})" mat-flat-button color="primary">Add Row</button>
 </div>
-&lt;!&ndash; Editable table &ndash;&gt;-->
+
+<br>
+<br>
+
 <h1>Verkäuferprofil</h1>
 <body>
 <span class="stretcher"></span>
