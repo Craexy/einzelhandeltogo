@@ -4,6 +4,7 @@ import { ClientViewComponent } from './client-view.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatButtonModule} from "@angular/material/button";
 
 @NgModule({
   declarations: [ClientViewComponent],
@@ -15,6 +16,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     MatGridListModule,
     MatSidenavModule,
     MatCheckboxModule,
+    MatButtonModule,
   ]
 })
 export class ClientViewModule { }

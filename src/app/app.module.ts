@@ -17,8 +17,10 @@ import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {APIInterceptor} from "../shared/HttpInterceptor";
 import {MatCardModule} from "@angular/material/card";
 import {MatButtonModule} from "@angular/material/button";
+import {MatIconModule} from "@angular/material/icon";
 import { DialogBoxComponent } from './dialog-box/dialog-box.component';
 import { FormsModule } from '@angular/forms';
+import {DriverComponent} from "../driver/driver.component";
 
 
 const appRoutes: Routes = [
@@ -26,6 +28,7 @@ const appRoutes: Routes = [
   { path: 'login', component: LoginComponent},
   { path: 'seller/:id', component: SellerViewComponent },
   { path: 'client/:id', component: ClientViewComponent},
+  { path: 'driver/:id', component: DriverComponent},
   { path: '',
   redirectTo: '/home',
     pathMatch: 'full'
@@ -57,7 +60,8 @@ const appRoutes: Routes = [
     MatToolbarModule,
     HttpClientModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    MatIconModule,
   ],
   entryComponents: [
     DialogBoxComponent

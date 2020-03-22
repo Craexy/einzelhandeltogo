@@ -7,7 +7,11 @@ export class APIInterceptor implements HttpInterceptor {
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     let apiReq
     let temp = req.url.split(':', 1);
-    if (temp[0]=='http'){
+
+    if (req.url.split('/', 1)[0]=='..'){
+      console.log("SVG");
+      apiReq = req;
+    } else if (temp[0]=='http'){
       apiReq = req;
     } else {
       apiReq = req.clone({ url: `http://maxvorhauer.pythonanywhere.com/shop/${req.url}` });
