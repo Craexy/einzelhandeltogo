@@ -57,7 +57,7 @@ export class ClientViewComponent implements OnInit {
   ];
 
   public open(event, id) {
-    window.location.href='/shop/id';
+    window.location.href='/shop/'+(id+1);
   }
 
   constructor() { }
