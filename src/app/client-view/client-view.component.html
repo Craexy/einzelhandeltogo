@@ -1,6 +1,7 @@
-<br>
+<body>
 
-<button (click)="sidenav.toggle()" id="myBtn" title="Go to top">Filter</button>
+<!--<button (click)="sidenav.toggle()" id="myBtn" title="Go to top">Filter</button>-->
+<button (click)="sidenav.toggle()" id="myBtn" mat-raised-button color="accent">Filter</button>
 
 <mat-sidenav-container class="example-container">
   <mat-sidenav #sidenav mode="over" fixedInViewport="true">
@@ -20,8 +21,18 @@
       [rowspan]="tile.rows"
       [style.background]="tile.color">
       <mat-grid-tile-header [style.background]="'#045673'">{{tile.text}}</mat-grid-tile-header>
-      <mat-grid-tile-footer [style.background]="'#A0B1C6'">Address of the shop</mat-grid-tile-footer>
-      Repräsentatives Bild
+      <mat-grid-tile-footer [style.background]="'#grey'">
+        <span>
+          Mustersraße 32
+        <br> 01066 Dresden
+        </span>
+        <span class="stretcher"></span>
+        <span>
+          <a mat-raised-button color="accent" href="amazon.com">Muster-Shop 24</a>
+        </span>
+      </mat-grid-tile-footer>
+      <img src="../../assets/SupportLocals_logo.png" width="60%">
   </mat-grid-tile>
 </mat-grid-list>
 
+</body>
