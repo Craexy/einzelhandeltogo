@@ -25,6 +25,7 @@ import { DetailsViewComponent } from './details-view/details-view.component';
 import {DriverModule} from "../driver/driver.module";
 import {ProfileComponent} from "../profile/profile.component";
 import {ProfileModule} from "../profile/profile.module";
+import { DetailsViewModule } from './details-view/details-view.module';
 
 
 const appRoutes: Routes = [
@@ -61,6 +62,7 @@ const appRoutes: Routes = [
     BrowserAnimationsModule,
     ClientViewModule,
     FormsModule,
+    DetailsViewModule,
     RouterModule.forRoot(
       appRoutes,
       {enableTracing: false} // <-- debugging purposes only

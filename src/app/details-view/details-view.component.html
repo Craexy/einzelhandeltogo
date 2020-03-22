@@ -1,2 +1,17 @@
-<p>details-view works!</p>
+<body>
+    <h1>Muster-Laden</h1>
+    <h2>Produktliste</h2>
 
+<mat-list role="list" class="inline-block">
+    <mat-list-item role="listitem" *ngFor="let product of products; index as id">{{product.product}}</mat-list-item>
+</mat-list>
+
+<mat-list role="list" class="inline-block">
+    <mat-list-item role="listitem" *ngFor="let product of products; index as id">{{product.price}} €</mat-list-item>
+</mat-list>
+
+<mat-list role="list" class="inline-block">
+    <button mat-list-item *ngFor="let product of products; index as id" (click)="addToShoppingCart($event, id)"> Buy </button>
+</mat-list>
+
+</body>
